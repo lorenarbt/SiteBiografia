@@ -1,2 +1,2 @@
 # SiteBiografia
-Projeto final do curso de propgramação Womankers Code.
+Projeto final do curso de programação Womankers Code.
