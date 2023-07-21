@@ -191,6 +191,8 @@ section{
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  height: 300px;
+  text-align: center;
 }
 
 .fourth-section ul{
@@ -251,6 +253,20 @@ footer > div{
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.historia{
+  line-height: 35px;
+  margin-bottom: 100px;
+}
+
+.fifth-section{
+  text-align:justify;
+}
+
+.title-fifth{
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 
@@ -381,14 +397,14 @@ footer > div{
 
 .gallery-controls-next::before{
   border: solid #000;
-  border-right: 0 5px 5px 0;
+  border-width: 0 5px 5px 0;
   content: " ";
   display: inline-block;
   height: 5px;
   padding: 10px;
   position: absolute;
   right: -30px;
-  top: 45;
+  top: 45%;
   transform: rotate(-45deg) translateY(-50%);
   transition: right 0.15s ease-in-out;
   width: 5px;

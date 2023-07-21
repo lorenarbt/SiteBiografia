@@ -1,6 +1,6 @@
 const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
-const galleryControls = ['previous', 'next'];
+const galleryControls = ['Anterior', 'Próximo'];
 const galleryItems = document.querySelectorAll('.gallery-item');
 
 class Carousel {
@@ -21,7 +21,7 @@ class Carousel {
     });
 
     this.carouselArray.slice(0,5).forEach((el, i) =>{
-      el.classList.add(`gallery-item-${i+1}`);
+      el.classList.add(`gallery-item${i+1}`);
     });
   }
 
@@ -35,10 +35,11 @@ class Carousel {
   }
 
   setControls(){
-    this.carouselControls.forEach(control =>{
-      galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-${control}`;
-      document.querySelector(`.gallery-controls-${control}`).innerText = control;
-    });
+      galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-previous`;
+      document.querySelector(`.gallery-controls-previous`).innerText = 'Anterior';
+
+      galleryControlsContainer.appendChild(document.createElement('button')).className = `gallery-controls-next`;
+      document.querySelector(`.gallery-controls-next`).innerText = 'Próximo';
   }
 
   useControls(){
@@ -56,4 +57,4 @@ class Carousel {
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 
 exampleCarousel.setControls();
-exampleCarousel.useCotrols();
+exampleCarousel.useControls();
